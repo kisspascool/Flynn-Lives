@@ -154,6 +154,35 @@ bass = \relative c, {
   gis~| gis | %36
   R1 *2 | %38
 
+  gis1 | gis1 | %40
+  fis1 | fis1 | %42
+  e1 | e1 | %44
+  dis1| dis1 | %46
+  gis1 | eis2 cis2 | %48
+  e1 | e1 | %50
+  cis1 | cis1 | %52
+  gis | gis | gis | gis | %56
+
+  gis1 | gis1 | %58
+  fis1 | fis1 | %60
+  e1 | e1 | %62
+  dis1| dis1 | %64
+  gis1 | eis2 cis2 | %66
+  e'1 | e1 | %68
+  cis1 | cis1 | %70
+  gis | gis | gis | gis | %74
+
+  gis1 | gis1 | %76
+  fis1 | fis1 | %78
+  e1 | e1 | %80
+  dis1| dis1 | %82
+  gis1 | eis2 cis2 | %84
+  e'1 | e1 | %86
+  cis1 | cis1 | %88
+  gis | gis |  %90
+  gis8 r8 r2. \bar "|."
+
+
 
 
 
@@ -374,6 +403,31 @@ left = \relative c' {
 drum = \drummode {
   \global
   % Ajouter notation de percussions.
+  R1*5 | %6
+  cymr2:32\p \< cymr2:32 \mf | %7
+  R1*31 | %38
+
+  R1*18 | %56
+
+  toml1 \mf | r1 |
+  r1 | r1 |
+  r1 | toml2 toml2 |
+  r1 | toml1:32 |
+  toml1 | r1 |
+  r1 | r1 |
+  r1 | toml1:32 |
+  toml1 | r1 |
+  toml1 | r1 | %74
+
+  <toml cymc>1 \ff | r1 | %76
+  r1 | r1 | %78
+  r1 | r1 | %80
+  r1 | toml1:32 \< | %82
+  <toml cymc>1 \ff | r1 |%84
+  r1 | r1 |%86
+  r1 | r1 |%88
+  r1 | cymc1:32 | %90
+  <toml cymc>8 r8 r2. \bar "|."
 
 }
 
@@ -456,6 +510,7 @@ drumsPart = \new DrumStaff \with {
   \consists "Instrument_name_engraver"
   instrumentName = "Batterie"
   shortInstrumentName = "Bt."
+  midiInstrument = "drums"
 } \drum
 
 \score {

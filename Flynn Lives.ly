@@ -60,6 +60,12 @@ violinI = \relative c'' {
   \repeat percent 4 {\motifA} | %66
   \repeat percent 4 {\motifA} | %70
   \repeat percent 4 {\motifA} | %74
+
+  \repeat percent 4 {\motifA} | %78
+  \repeat percent 4 {\motifA} | %82
+  \repeat percent 4 {\motifA} | %86
+  \repeat percent 4 {\motifA} | %90
+  dis'8 r8 r2. \bar "|."
 }
 
 motifB = {dis'8 cis cis gis dis' cis cis gis} %Violon 2
@@ -90,22 +96,43 @@ violinII = \relative c'' {
   \repeat percent 4 {\motifB} | %68
   \repeat percent 6 {\motifB} | %74
 
+  \repeat percent 4 {\motifB} | %78
+  \repeat percent 4 {\motifB} | %82
+  \repeat percent 4 {\motifB} | %86
+  \repeat percent 4 {\motifB} | %90
+  gis'8 r8 r2. \bar "|."
+
 
 }
+
+motifC = {b8 cis cis b b cis cis b} %Cello
+motifD = {dis'8 cis cis gis dis' cis cis gis} %Cello
 
 cello = \relative c {
   \global
   % En avant la musique !
   r1 | r1 | %3
-  b8 cis cis b b cis cis b | b cis cis b b cis cis b | %5
-  b8 cis cis b b cis cis b | b cis cis b b cis cis b | %7
-  b8 cis cis b b cis cis b | b cis cis b b cis cis b | %9
-  b8 cis cis b b cis cis b | b cis cis b b cis cis b | %11
+  \motifC | \motifC | %5
+  \motifC | \motifC | %7
+  \motifC | \motifC | %9
+  \motifC | \motifC | %11
 
-  R1 * 27 | %38
+  \repeat percent 5 {\motifC} | %16
+  \repeat percent 4 {\motifC} | %20
+  \repeat percent 4 {\motifC} | %24
+  \repeat percent 4 {\motifC} | %28
+  \repeat percent 5 {\motifC} | %33
+  \repeat percent 5 {\motifC} | %38
 
-  dis'8 cis cis gis dis' cis cis gis | dis' cis cis gis dis' cis cis gis |
-  dis'8 cis cis gis dis' cis cis gis | dis' cis cis gis dis' cis cis gis |
+  \repeat percent 4 {\motifD} | %42
+  \repeat percent 4 {\motifD} | %46
+  \repeat percent 4 {\motifD} | %50
+  \repeat percent 6 {\motifD} | %56
+
+  \repeat percent 4 {\motifD} | %60
+  \repeat percent 4 {\motifD} | %64
+  \repeat percent 4 {\motifD} | %68
+  \repeat percent 6 {\motifD} | %74
 
 }
 
@@ -148,20 +175,27 @@ flute = \relative c'' {
 
   gis16 dis16 cis gis r4 gis'16 dis16 cis gis r4 |
   gis'16 dis16 cis gis r4 gis'16 dis16 cis gis r4 |
+
+  gis'16 dis16 cis fis, r4 gis'16 dis16 cis fis, r4 |
+  gis'16 dis16 cis fis, r4 gis'16 dis16 cis fis, r4 |
+
+  gis'16 dis16 cis e, r4 gis'16 dis16 cis e, r4 |
+  gis'16 dis16 cis e, r4 gis'16 dis16 cis e, r4 |
+
+  gis'16 dis16 cis dis, r4 gis'16 dis16 cis dis, r4 |
+  gis'16 dis16 cis dis, r4 gis'16 dis16 cis dis, r4 |
+
   gis'16 dis16 cis gis r4 gis'16 dis16 cis gis r4 |
   gis'16 dis16 cis gis r4 gis'16 dis16 cis gis r4 |
-  gis'16 dis16 cis gis r4 gis'16 dis16 cis gis r4 |
-  gis'16 dis16 cis gis r4 gis'16 dis16 cis gis r4 |
-  gis'16 dis16 cis gis r4 gis'16 dis16 cis gis r4 |
-  gis'16 dis16 cis gis r4 gis'16 dis16 cis gis r4 |
-  gis'16 dis16 cis gis r4 gis'16 dis16 cis gis r4 |
-  gis'16 dis16 cis gis r4 gis'16 dis16 cis gis r4 |
+
+
+
   gis'16 dis16 cis gis r4 gis'16 dis16 cis gis r4 |
   gis'16 dis16 cis gis r4 gis'16 dis16 cis gis r4 |
 
   % Changement d'accord
-  ais'16 e dis ais r4 ais'16 e dis ais r4 |
-  ais'16 e dis ais r4 ais'16 e dis ais r4 |
+  gis'16 dis16 cis ais r4 gis'16 dis16 cis ais r4 |
+  gis'16 dis16 cis ais r4 gis'16 dis16 cis ais r4 |
 
   gis'16 dis16 cis gis r4 gis'16 dis16 cis gis r4 |
   gis'16 dis16 cis gis r4 gis'16 dis16 cis gis r4 |
@@ -373,13 +407,13 @@ bassPart = \new Staff \with {
 flutePart = \new Staff \with {
   instrumentName = "Flûte"
   midiInstrument = "flute"
-  shortInstrumentName = "fl."
+  shortInstrumentName = "Fl."
 } \flute
 
 clarinetPart = \new Staff \with {
   instrumentName = "Clarinette"
   midiInstrument = "clarinet"
-  shortInstrumentName = "clar."
+  shortInstrumentName = "Clar."
 } \clarinet
 
 altoSaxPart = \new Staff \with {

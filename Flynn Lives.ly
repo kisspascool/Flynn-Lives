@@ -13,6 +13,7 @@ indent = 25\mm
 short-indent = 15\mm
 }
 global = {
+  \set Score.skipBars = ##t
   \key e \major
   \time 4/4
   \tempo 4=108
@@ -22,13 +23,15 @@ track = {
   \set Score.markFormatter = #format-mark-box-alphabet
   \tempo 4=108
   \time 4/4 %1
-  s1*16 \mark \default | %16
+  s1*15 \mark \default | %16
   s1*22 \mark \default | %38
   s1*18 \mark \default | %56
   s1*18 \mark \default | %74
-  s1*16 \bar "|."
+  s1*17 \bar "|."
 
 }
+
+motifA = {b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis} %Violon I
 
 violinI = \relative c'' {
   \global
@@ -36,84 +39,30 @@ violinI = \relative c'' {
   b,16\pp \< gis cis gis cis gis b gis b gis cis gis cis gis b gis |
   b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis | %3
   b16\p gis cis gis cis gis b gis b gis cis gis cis gis b gis |
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis | %5
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis |
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis | %7
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis |
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis | %9
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis |
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis | %11
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis |
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis | %13
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis |
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis | %15
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis \mark \default| %16
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis | %17
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis |
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis | %19
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis |
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis | %21
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis |
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis | %23
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis |
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis | %25
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis |
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis | %27
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis |
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis | %29
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis |
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis | %31
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis |
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis | %33
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis |
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis | %35
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis |
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis | %37
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis \mark \default| %38
+  \motifA | %5
+  \repeat percent 4 {\motifA} | %9
+  \repeat percent 7 {\motifA} | %16
 
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis | %39
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis |
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis | %41
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis |
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis | %43
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis |
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis | %45
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis |
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis | %47
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis |
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis | %49
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis |
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis | %51
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis |
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis | %53
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis |
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis | %55
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis \mark \default| %56
+  \repeat percent 5 {\motifA} | %21
+  \repeat percent 4 {\motifA} | %25
+  \repeat percent 4 {\motifA} | %29
+  \repeat percent 4 {\motifA} | %33
+  \repeat percent 5 {\motifA} | %38
+
+  \repeat percent 5 {\motifA} | %43
+  \repeat percent 4 {\motifA} | %47
+  \repeat percent 4 {\motifA} | %51
+  \repeat percent 5 {\motifA} | %56
 
   % A l'octave pour violons 1
   b'16 gis cis gis cis gis b gis b gis cis gis cis gis b gis |
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis | %58
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis |
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis | %60
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis |
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis | %62
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis |
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis | %64
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis |
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis | %66
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis |
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis | %68
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis |
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis | %70
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis |
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis | %72
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis |
-  b16 gis cis gis cis gis b gis b gis cis gis cis gis b gis \mark \default| %74
-
-
-
-
+  \repeat percent 5 {\motifA} | %62
+  \repeat percent 4 {\motifA} | %66
+  \repeat percent 4 {\motifA} | %70
+  \repeat percent 4 {\motifA} | %74
 }
+
+motifB = {dis'8 cis cis gis dis' cis cis gis} %Violon 2
 
 violinII = \relative c'' {
   \global
@@ -123,40 +72,23 @@ violinII = \relative c'' {
   b,8\mp r r4 b8 r r4 | b8 r r4 b8 r r4 | %7
   b8 r r4 b8 r r4 | b8 r r4 b8 r r4 | %9
   b8 r r4 b8 r r4 | b8 r r4 b8 r r4 | %11
-  dis8\p cis cis gis dis' cis cis gis | dis' cis cis gis dis' cis cis gis | %13
-  dis'8 cis cis gis dis' cis cis gis | dis' cis cis gis dis' cis cis gis | %15
-  dis'8 cis cis gis dis' cis cis gis \mark \default| dis' cis cis gis dis' cis cis gis |
-  dis'8 cis cis gis dis' cis cis gis | dis' cis cis gis dis' cis cis gis | %19
-  dis'8 cis cis gis dis' cis cis gis | dis' cis cis gis dis' cis cis gis |
-  dis'8 cis cis gis dis' cis cis gis | dis' cis cis gis dis' cis cis gis | %23
-  dis'8 cis cis gis dis' cis cis gis | dis' cis cis gis dis' cis cis gis |
-  dis'8 cis cis gis dis' cis cis gis | dis' cis cis gis dis' cis cis gis | %27
-  dis'8 cis cis gis dis' cis cis gis | dis' cis cis gis dis' cis cis gis |
-  dis'8 cis cis gis dis' cis cis gis | dis' cis cis gis dis' cis cis gis | %31
-  dis'8 cis cis gis dis' cis cis gis | dis' cis cis gis dis' cis cis gis |
-  dis'8 cis cis gis dis' cis cis gis | dis' cis cis gis dis' cis cis gis | %35
-  dis'8 cis cis gis dis' cis cis gis | dis' cis cis gis dis' cis cis gis |
-  dis'8 cis cis gis dis' cis cis gis \mark \default| %38
-  dis' cis cis gis dis' cis cis gis | %39
-  dis'8 cis cis gis dis' cis cis gis | dis' cis cis gis dis' cis cis gis |
-  dis'8 cis cis gis dis' cis cis gis | dis' cis cis gis dis' cis cis gis | %43
-  dis'8 cis cis gis dis' cis cis gis | dis' cis cis gis dis' cis cis gis |
-  dis'8 cis cis gis dis' cis cis gis | dis' cis cis gis dis' cis cis gis | %47
-  dis'8 cis cis gis dis' cis cis gis | dis' cis cis gis dis' cis cis gis |
-  dis'8 cis cis gis dis' cis cis gis | dis' cis cis gis dis' cis cis gis | %51
-  dis'8 cis cis gis dis' cis cis gis | dis' cis cis gis dis' cis cis gis |
-  dis'8 cis cis gis dis' cis cis gis | dis' cis cis gis dis' cis cis gis | %55
-  dis'8 cis cis gis dis' cis cis gis \mark \default| %56
+  dis8\p cis cis gis dis' cis cis gis | \repeat percent 4 {\motifB} | %16
 
-  dis'8 cis cis gis dis' cis cis gis | dis'8 cis cis gis dis' cis cis gis | %58
-  dis'8 cis cis gis dis' cis cis gis | dis'8 cis cis gis dis' cis cis gis | %60
-  dis'8 cis cis gis dis' cis cis gis | dis'8 cis cis gis dis' cis cis gis | %62
-  dis'8 cis cis gis dis' cis cis gis | dis'8 cis cis gis dis' cis cis gis | %64
-  dis'8 cis cis gis dis' cis cis gis | dis'8 cis cis gis dis' cis cis gis | %66
-  dis'8 cis cis gis dis' cis cis gis | dis'8 cis cis gis dis' cis cis gis | %68
-  dis'8 cis cis gis dis' cis cis gis | dis'8 cis cis gis dis' cis cis gis | %70
-  dis'8 cis cis gis dis' cis cis gis | dis'8 cis cis gis dis' cis cis gis | %72
-  dis'8 cis cis gis dis' cis cis gis | dis'8 cis cis gis dis' cis cis gis | %74
+  \repeat percent 7 {\motifB} | %23
+  \repeat percent 4 {\motifB} | %27
+  \repeat percent 4 {\motifB} | %31
+  \repeat percent 4 {\motifB} | %35
+  \repeat percent 3 {\motifB} | %38
+
+  \repeat percent 5 {\motifB} | %43
+  \repeat percent 4 {\motifB} | %47
+  \repeat percent 4 {\motifB} | %51
+  \repeat percent 5 {\motifB} | %56
+
+  \repeat percent 4 {\motifB} | %60
+  \repeat percent 4 {\motifB} | %64
+  \repeat percent 4 {\motifB} | %68
+  \repeat percent 6 {\motifB} | %74
 
 
 }
@@ -203,7 +135,7 @@ bass = \relative c, {
 flute = \relative c'' {
   \global
   % En avant la musique !
-  R1*37 \mark \default| %38
+  R1*37 | %38
   r4 dis' r dis | r4 dis r dis | %40
   r4 dis r dis | r4 dis r dis | %42
   r4 dis r dis | r4 dis r dis | %44
@@ -212,7 +144,7 @@ flute = \relative c'' {
   r4 dis r dis | r4 dis r dis | %50
   r4 dis r dis | r4 dis r dis | %52
   r4 dis r dis | r4 dis r dis | %54
-  r4 dis r dis | r1 \mark \default| %56
+  r4 dis r dis | r1 | %56
 
   gis16 dis16 cis gis r4 gis'16 dis16 cis gis r4 |
   gis'16 dis16 cis gis r4 gis'16 dis16 cis gis r4 |
@@ -242,7 +174,7 @@ clarinet = \relative c'' {
   \global
   %\transposition bes
   % En avant la musique !
-  R1*37 \mark \default| %38
+  R1*37 | %38
   r4 dis r dis | r4 dis r dis | %40
   r4 dis r dis | r4 dis r dis | %42
   r4 dis r dis | r4 dis r dis | %44
@@ -258,7 +190,7 @@ altoSax = \relative c' {
   \global
   %\transposition es
   % En avant la musique !
-  R1*15 \mark \default| %16
+  R1*15 | %16
   dis1 \mf | cis ~ | cis | %19
   b ~ | b ~ | b | %22
   ais ~| ais | %24
@@ -267,7 +199,7 @@ altoSax = \relative c' {
   cis ~cis | %32
   gis~| gis | %34
   gis~| gis | %36
-  r1 | r2. gis4 \mark \default| %38
+  r1 | r2. gis4 | %38
   dis'1 ~ | dis2 ~ \times 2/3 { dis4 gis, dis' } | %40
   cis1 ~ | cis2 ~\times 2/3 {cis4 gis cis} | %42
   b1 ~| b2 ~\times 2/3 {b4 gis b} | %44
@@ -275,7 +207,7 @@ altoSax = \relative c' {
   gis1 ~ | gis2. gis4 | %48
   b1 ~ | b2 ~\times 2/3 {b4 gis b} | %50
   cis1 ~| cis2 ~\times 2/3 {cis4 cis, dis} | %52
-  gis1~|gis | r1 | r1 \mark \default|%56
+  gis1~|gis | r1 | r1 |%56
 
   dis'1 ~ | dis2 ~ \times 2/3 { dis4 gis, dis' } | %58
   cis1 ~ | cis2 ~\times 2/3 {cis4 gis cis} | %60
@@ -284,7 +216,7 @@ altoSax = \relative c' {
   gis1 ~ | gis2. gis4 | %66
   b1 ~ | b2 ~\times 2/3 {b4 gis b} | %68
   cis1 ~| cis2 ~\times 2/3 {cis4 cis, dis} | %70
-  gis1~|gis | gis1~ | gis1 \mark \default|%74
+  gis1~|gis | gis1~ | gis1 |%74
 
 }
 
@@ -313,12 +245,12 @@ trumpetBbI = \relative c'' {
   \global
   %\transposition bes
   % En avant la musique !
-  R1*15 \mark \default| %16
+  R1*15 | %16
 
 
-  R1*22 \mark \default | %38
+  R1*22 | %38
 
-  R1*18 \mark \default | %56
+  R1*18  | %56
 
   dis,1 ~ | dis2 ~ \times 2/3 { dis4 gis, dis' } | %58
   cis1 ~ | cis2 ~\times 2/3 {cis4 gis cis} | %60
@@ -327,7 +259,7 @@ trumpetBbI = \relative c'' {
   gis1 ~ | gis2. gis4 | %66
   b1 ~ | b2 ~\times 2/3 {b4 gis b} | %68
   cis1 ~| cis2 ~\times 2/3 {cis4 cis, dis} | %70
-  gis1~|gis | gis1~ | gis1 \mark \default|%74
+  gis1~|gis | gis1~ | gis1 |%74
 
   dis''1 ~ | dis2 ~ \times 2/3 { dis4 gis, dis' } | %76
   cis1 ~ | cis2 ~\times 2/3 {cis4 gis cis} | %78
@@ -347,13 +279,13 @@ trumpetBbII = \relative c'' {
   \global
   %\transposition bes
   % En avant la musique !
-  R1*15 \mark \default| %16
+  R1*15 | %16
 
-  R1*22 \mark \default | %38
+  R1*22  | %38
 
-  R1*18 \mark \default | %56
+  R1*18  | %56
 
-  R1*18 \mark \default | %74
+  R1*18  | %74
 
   dis,1 ~ | dis2 ~ \times 2/3 { dis4 gis, dis' } | %76
   cis1 ~ | cis2 ~\times 2/3 {cis4 gis cis} | %78
@@ -382,7 +314,7 @@ left = \relative c' {
   r2 gis,2 ~| gis1 ~|gis1~ | %9
   gis1 | r1 | %11
   gis1 ~ | gis1 ~ | gis1 | %14
-  r1 | r1 \mark \default| %16
+  r1 | r1 | %16
   gis1 | fis ~ | fis | %19
   e ~ | e ~ | e | %22
   dis ~| dis | %24
@@ -415,7 +347,10 @@ violinIPart = \new Staff \with {
   instrumentName = "Violon I"
   shortInstrumentName = "Viol. I"
   midiInstrument = "violin"
-} \violinI
+}<<
+  \new Voice {\violinI}
+  \new Voice {\track}
+  >>
 
 violinIIPart = \new Staff \with {
   instrumentName = "Violon II"

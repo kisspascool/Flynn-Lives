@@ -513,6 +513,8 @@ drumsPart = \new DrumStaff \with {
   midiInstrument = "drums"
 } \drum
 
+\book {
+  \bookOutputName "pdf/Score"
 \score {
   <<
 
@@ -535,6 +537,7 @@ drumsPart = \new DrumStaff \with {
   >>
   \layout { }
   \midi { }
+}
 }
 
 % Parties séparées

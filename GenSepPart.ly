@@ -1,3 +1,5 @@
+%Ajouter nom des instruments sur la page 2
+
 \book {
   \bookOutputName "pdf/Flute"
   \paper {
@@ -26,7 +28,7 @@
     \new Staff
     <<
     \set Staff.instrumentName = "Clarinet"
-    \new Voice {\clarinet}
+    \new Voice {\transpose bes c'{\clarinet}}
     \new Voice {\track}
     >>
     >>
@@ -44,7 +46,7 @@
     \new Staff
     <<
     \set Staff.instrumentName = "Alto Sax"
-    \new Voice {\altosax}
+    \new Voice {\transpose ees c'{\altoSax}}
     \new Voice {\track}
     >>
     >>
@@ -62,7 +64,7 @@
     \new Staff
     <<
     \set Staff.instrumentName = "Tenor Sax"
-    \new Voice {\tenorsax}
+    \new Voice {\transpose bes c'{\tenorSax}}
     \new Voice {\track}
     >>
     >>
@@ -80,7 +82,7 @@
     \new Staff
     <<
     \set Staff.instrumentName = "Trumpet I"
-    \new Voice {\trumpetBbI}
+    \new Voice {\transpose bes c'{\trumpetBbI}}
     \new Voice {\track}
     >>
     >>
@@ -98,7 +100,7 @@
     \new Staff
     <<
     \set Staff.instrumentName = "Trumpet II"
-    \new Voice {\trumpetBbII}
+    \new Voice {\transpose bes c'{\trumpetBbII}}
     \new Voice {\track}
     >>
     >>
@@ -190,10 +192,10 @@
     \set PianoStaff.instrumentName = "Piano"
     \new Staff <<
       \new Voice {\track}
-      \new Voice {\left}
+      \new Voice {\right}
       >>
     \new Staff <<
-      \new Voice {\right}
+      \new Voice {\clef "bass" \left}
     >>
 
     >>
@@ -209,9 +211,9 @@
   }
   \score {
     <<
-    \new Staff
+    \new DrumStaff
     <<
-    \set Staff.instrumentName = "Percussions"
+    \set DrumStaff.instrumentName = "Percussions"
     \new DrumVoice {\drum}
     \new DrumVoice {\track}
     >>
